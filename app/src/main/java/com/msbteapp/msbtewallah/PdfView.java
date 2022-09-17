@@ -29,12 +29,13 @@ public class PdfView extends AppCompatActivity {
         ProgressDialog pd = new ProgressDialog(this);
         pd.setTitle(filename);
         pd.setMessage("Opening....");
+        pd.setCancelable(false);
+        pd.show();
 
         pdfView.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-                pd.show();
             }
 
             @Override
