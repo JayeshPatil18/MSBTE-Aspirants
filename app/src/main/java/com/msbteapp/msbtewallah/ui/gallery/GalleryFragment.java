@@ -16,10 +16,16 @@ import androidx.fragment.app.Fragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.msbteapp.msbtewallah.R;
 import com.msbteapp.msbtewallah.databinding.FragmentGalleryBinding;
 
 public class GalleryFragment extends Fragment {
+
+    private InterstitialAd mInterstitialAd;
 
     ShimmerFrameLayout shimmerFrameLayout;
 
@@ -36,6 +42,24 @@ public class GalleryFragment extends Fragment {
 
         shimmerFrameLayout = view.findViewById(R.id.shimmer_website);
         shimmerFrameLayout.startShimmer();
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(getContext(),"ca-app-pub-6829345224658071/1102529491", adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        mInterstitialAd = null;
+                    }
+                });
 
         swipe = view.findViewById(R.id.swipe);
 
@@ -81,6 +105,7 @@ public class GalleryFragment extends Fragment {
                     if (i == KeyEvent.KEYCODE_BACK){
                         if (webView.canGoBack()){
                             webView.goBack();
+                            mInterstitialAd.show(getActivity());
                         }else{
                             getActivity().onBackPressed();
                         }

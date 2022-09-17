@@ -11,4 +11,9 @@
     <string name="menu_web">MSBTE Website</string>
     <string name="menu_posts">MSBTE Posts</string>
     <string name="download">Download</string>
+
+    <string name="appAdId">ca-app-pub-6829345224658071~6349603858</string>
+    <string name="homeAdId">ca-app-pub-6829345224658071/4716919998</string>
+    <string name="semAdId">cca-app-pub-6829345224658071/6079524006</string>
+    <string name="resAdId">ca-app-pub-6829345224658071/3261788974</string>
 </resources>

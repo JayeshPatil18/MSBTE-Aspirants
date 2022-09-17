@@ -1,5 +1,6 @@
 package com.msbteapp.msbtewallah;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -8,9 +9,16 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
 import java.net.URLEncoder;
 
 public class PdfView extends AppCompatActivity {
+
+    private InterstitialAd mInterstitialAd;
 
     WebView pdfView;
 
@@ -20,6 +28,24 @@ public class PdfView extends AppCompatActivity {
         setContentView(R.layout.activity_pdf_view);
 
         getSupportActionBar().hide();
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(this,"ca-app-pub-6829345224658071/1404113523", adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        mInterstitialAd = null;
+                    }
+                });
 
         pdfView = findViewById(R.id.viewPdf);
         pdfView.getSettings().setJavaScriptEnabled(true);
@@ -51,5 +77,13 @@ public class PdfView extends AppCompatActivity {
         }catch (Exception e){}
 
         pdfView.loadUrl("http://docs.google.com/gview?embedded=true&url=" + url);
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(PdfView.this);
+        }
     }
 }
