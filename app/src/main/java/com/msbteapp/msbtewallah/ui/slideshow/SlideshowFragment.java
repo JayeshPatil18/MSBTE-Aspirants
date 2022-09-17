@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +30,10 @@ import java.util.ArrayList;
 
 public class SlideshowFragment extends Fragment {
 
+    TextView emptyView;
+
+    ShimmerFrameLayout shimmerFrameLayout;
+
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference root;
     private RecyclerView recyclerView;
@@ -40,6 +45,11 @@ public class SlideshowFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_slideshow, container, false);
+
+        shimmerFrameLayout = view.findViewById(R.id.shimmer_post);
+        shimmerFrameLayout.startShimmer();
+
+        emptyView = view.findViewById(R.id.emptyDisplayViewPost);
 
         root = database.getReference("posts");
 
@@ -62,7 +72,18 @@ public class SlideshowFragment extends Fragment {
                     Item model = dataSnapshot.getValue(Item.class);
                     list.add(0, model);
                 }
+                shimmerFrameLayout.stopShimmer();
+                shimmerFrameLayout.setVisibility(View.GONE);
+
+                if (list.isEmpty()){
+                    recyclerView.setVisibility(View.GONE);
+                    emptyView.setVisibility(View.VISIBLE);
+                }else{
+                    emptyView.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
+                }
                 adapter.notifyDataSetChanged();
+                recyclerView.scrollToPosition(0);
             }
 
             @Override

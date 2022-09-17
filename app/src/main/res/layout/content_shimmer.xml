@@ -15,7 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
         android:orientation="horizontal">
 
 
@@ -29,12 +28,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingEnd="10dp"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             tools:ignore="RtlSymmetry">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
 
             <TextView
                 android:id="@+id/content_title"
@@ -49,23 +54,22 @@
             <TextView
                 android:id="@+id/content_desc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="5dp"
                 android:padding="5dp"
                 android:text=""
                 android:textSize="15dp"
                 android:background="@drawable/shimmer_bg"/>
 
+            </LinearLayout>
 
             <Button
-                android:id="@+id/download_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:background="@drawable/download_btn_bg"
-                android:layout_gravity="bottom"
-                android:textColor="@color/white"/>
+                android:background="@drawable/shimmer_bg"
+                android:layout_gravity="bottom"/>
 
         </LinearLayout>
 

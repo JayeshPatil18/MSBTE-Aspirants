@@ -15,10 +15,13 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.msbteapp.msbtewallah.R;
 import com.msbteapp.msbtewallah.databinding.FragmentGalleryBinding;
 
 public class GalleryFragment extends Fragment {
+
+    ShimmerFrameLayout shimmerFrameLayout;
 
     SwipeRefreshLayout swipe;
     ProgressBar progressBar;
@@ -30,6 +33,9 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gallery, container, false);
+
+        shimmerFrameLayout = view.findViewById(R.id.shimmer_website);
+        shimmerFrameLayout.startShimmer();
 
         swipe = view.findViewById(R.id.swipe);
 
@@ -50,8 +56,17 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
                 progressBar.setProgress(newProgress);
+                if (newProgress >= 50){
+                    shimmerFrameLayout.stopShimmer();
+                    shimmerFrameLayout.setVisibility(View.GONE);
+                    swipe.setVisibility(View.VISIBLE);
+                }
+
                 if (newProgress == 100){
                     progressBar.setVisibility(View.INVISIBLE);
+                    shimmerFrameLayout.stopShimmer();
+                    shimmerFrameLayout.setVisibility(View.GONE);
+                    swipe.setVisibility(View.VISIBLE);
                 }else{
                     progressBar.setVisibility(View.VISIBLE);
                 }

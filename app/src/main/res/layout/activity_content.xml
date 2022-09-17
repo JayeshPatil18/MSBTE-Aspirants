@@ -4,14 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Content">
+    tools:context=".Content"
+    android:gravity="center">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/emptyDisplayViewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Data Available"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </LinearLayout>
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/shimmer_content"
         android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,16 +46,8 @@
             <include layout="@layout/content_shimmer"/>
             <include layout="@layout/content_shimmer"/>
         </LinearLayout>
+        </ScrollView>
     </com.facebook.shimmer.ShimmerFrameLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,7 +59,6 @@
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-
     </LinearLayout>
 
 </RelativeLayout>

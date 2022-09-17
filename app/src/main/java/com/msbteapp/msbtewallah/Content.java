@@ -9,8 +9,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +23,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class Content extends AppCompatActivity {
+
+    TextView emptyTextView;
+    ShimmerFrameLayout shimmerFrameLayout;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference root;
@@ -31,6 +37,11 @@ public class Content extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
+
+        shimmerFrameLayout = findViewById(R.id.shimmer_content);
+        shimmerFrameLayout.startShimmer();
+
+        emptyTextView = findViewById(R.id.emptyDisplayViewContent);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -72,7 +83,19 @@ public class Content extends AppCompatActivity {
                     Item model = dataSnapshot.getValue(Item.class);
                     list.add(model);
                 }
+
+                shimmerFrameLayout.stopShimmer();
+                shimmerFrameLayout.setVisibility(View.GONE);
+
+                if (list.isEmpty()){
+                    recyclerView.setVisibility(View.GONE);
+                    emptyTextView.setVisibility(View.VISIBLE);
+                }else{
+                    emptyTextView.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
+                }
                 adapter.notifyDataSetChanged();
+                recyclerView.scrollToPosition(0);
             }
 
             @Override

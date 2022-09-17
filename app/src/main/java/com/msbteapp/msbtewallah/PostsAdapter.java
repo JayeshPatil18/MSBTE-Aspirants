@@ -45,7 +45,6 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.MyViewHolder
             @Override
             public void onClick(View view) {
                 if (!(model.getLink().equals("null") || model.getLink().isEmpty())){
-                    Toast.makeText(context, "cliced", Toast.LENGTH_SHORT).show();
                     Uri uri = Uri.parse(model.getLink());
                     holder.layout.getContext().startActivity(new Intent(Intent.ACTION_VIEW, uri));
                 }

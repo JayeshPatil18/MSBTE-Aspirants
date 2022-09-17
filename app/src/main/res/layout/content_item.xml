@@ -29,12 +29,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingEnd="10dp"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             tools:ignore="RtlSymmetry">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
 
             <TextView
                 android:id="@+id/content_title"
@@ -57,6 +63,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"/>
 
+            </LinearLayout>
 
             <Button
                 android:id="@+id/download_btn"
