@@ -1,4 +1,4 @@
-package com.msbteapps.msbtewallah.ui.gallery;
+package com.msbteapp.msbtewallah.ui.gallery;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

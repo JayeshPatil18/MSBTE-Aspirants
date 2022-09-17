@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".Resource">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,73 +23,104 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="20dp"
                 android:background="@drawable/text_bg"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="Select Branch"
+                android:text="Select Resource"
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:gravity="center"
+                android:padding="10dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/branch_co"
+                    android:id="@+id/res_books"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/text_bg"
-                    android:text="Computer/IT"
+                    android:text="Books"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:textSize="15dp" />
 
                 <Button
-                    android:id="@+id/branch_mech"
+                    android:id="@+id/res_notes"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/text_bg"
-                    android:text="Mechanical"
+                    android:text="Notes"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/branch_elec"
+                    android:id="@+id/res_manuals"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/text_bg"
-                    android:text="Electrical"
+                    android:text="Manuals"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:textSize="15dp" />
 
                 <Button
-                    android:id="@+id/branch_civil"
+                    android:id="@+id/res_solvedManuals"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/text_bg"
-                    android:text="Civil"
+                    android:text="Solved manuals"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/res_pyqp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_bg"
+                    android:text="PYQ papers"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/res_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_bg"
+                    android:text="Other"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
             </LinearLayout>
 
         </LinearLayout>

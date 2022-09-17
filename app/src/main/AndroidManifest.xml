@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.msbteapps.msbtewallah">
+    package="com.msbteapp.msbtewallah">
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,16 @@
         android:theme="@style/Theme.MsbteWallah"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.msbteapp.msbtewallah.Content"
+            android:exported="false" />
+        <activity
+            android:name="com.msbteapp.msbtewallah.Resource"
+            android:exported="false" />
+        <activity
+            android:name="com.msbteapp.msbtewallah.Branch"
+            android:exported="false" />
+        <activity
+            android:name="com.msbteapp.msbtewallah.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MsbteWallah.NoActionBar">

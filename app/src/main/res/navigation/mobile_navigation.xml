@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.msbteapps.msbtewallah.ui.home.HomeFragment"
+        android:name="com.msbteapp.msbtewallah.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_web"
-        android:name="com.msbteapps.msbtewallah.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:name="com.msbteapp.msbtewallah.ui.gallery.GalleryFragment"
+        android:label="@string/menu_web"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_posts"
-        android:name="com.msbteapps.msbtewallah.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:name="com.msbteapp.msbtewallah.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_posts"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
