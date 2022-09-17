@@ -1,11 +1,19 @@
 package com.msbteapp.msbtewallah;
 
+import static android.content.Context.DOWNLOAD_SERVICE;
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
+
+import android.app.DownloadManager;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -19,19 +27,17 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
 
     ArrayList<Item> list;
     Context context;
-    private final RecyclerViewInterface recyclerViewInterface;
 
-    public ContentAdapter(Context context, ArrayList<Item> list, RecyclerViewInterface recyclerViewInterface) {
+    public ContentAdapter(Context context, ArrayList<Item> list) {
         this.list = list;
         this.context = context;
-        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.content_item, parent, false);
-        return new ViewHolder(view, recyclerViewInterface);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -40,6 +46,38 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
         holder.title.setText(model.getTitle());
         holder.desc.setText(model.getDesc());
         Glide.with(holder.imageView.getContext()).load(model.getImage()).into(holder.imageView);
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.cardView.getContext(), PdfView.class);
+                intent.putExtra("filename", model.getTitle());
+                intent.putExtra("fileurl", model.getLink());
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                holder.cardView.getContext().startActivity(intent);
+            }
+        });
+
+        holder.btnDownlaod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                downloadFile(holder.btnDownlaod.getContext(),model.getTitle(),".pdf",DIRECTORY_DOWNLOADS,model.getLink());
+            }
+        });
+    }
+
+    public void downloadFile(Context context, String fileName, String fileExtension, String destinationDirectory, String url) {
+
+        DownloadManager downloadmanager = (DownloadManager) context.
+                getSystemService(Context.DOWNLOAD_SERVICE);
+        Uri uri = Uri.parse(url);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
+
+        downloadmanager.enqueue(request);
     }
 
     @Override
@@ -51,26 +89,16 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
         ImageView imageView;
         TextView title, desc;
         CardView cardView;
+        Button btnDownlaod;
 
-        public ViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.content_image);
             title = itemView.findViewById(R.id.content_title);
             desc = itemView.findViewById(R.id.content_desc);
             cardView = itemView.findViewById(R.id.cardViewItem);
-
-            cardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (recyclerViewInterface != null){
-                        int pos = getAbsoluteAdapterPosition();
-                        if (pos != RecyclerView.NO_POSITION){
-                            recyclerViewInterface.onItemClick(pos);
-                        }
-                    }
-                }
-            });
+            btnDownlaod = itemView.findViewById(R.id.download_btn);
         }
     }
 }

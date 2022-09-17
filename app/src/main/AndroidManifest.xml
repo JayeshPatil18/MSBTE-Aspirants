@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.msbteapp.msbtewallah">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,16 +16,23 @@
         android:theme="@style/Theme.MsbteWallah"
         tools:targetApi="31">
         <activity
-            android:name="com.msbteapp.msbtewallah.Content"
-            android:exported="false" />
+            android:name=".PdfView"
+            android:exported="false"
+            android:parentActivityName=".Content"/>
         <activity
-            android:name="com.msbteapp.msbtewallah.Resource"
-            android:exported="false" />
+            android:name=".Content"
+            android:exported="false"
+            android:parentActivityName=".Resource"/>
         <activity
-            android:name="com.msbteapp.msbtewallah.Branch"
-            android:exported="false" />
+            android:name=".Resource"
+            android:exported="false"
+            android:parentActivityName=".Branch"/>
         <activity
-            android:name="com.msbteapp.msbtewallah.MainActivity"
+            android:name=".Branch"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MsbteWallah.NoActionBar">

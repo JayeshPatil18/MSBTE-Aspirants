@@ -3,18 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/drawable/download_btn_bg.xml" value="0.2375" />
         <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/drawable/text_bg.xml" value="0.208" />
         <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/activity_branch.xml" value="0.2" />
         <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/activity_content.xml" value="0.1" />
         <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/activity_main.xml" value="0.152" />
-        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/activity_resource.xml" value="0.2" />
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/activity_pdf_view.xml" value="0.16" />
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/activity_resource.xml" value="0.1" />
         <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/app_bar_main.xml" value="0.15555555555555556" />
-        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/content_item.xml" value="0.16" />
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/content_item.xml" value="0.1" />
         <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/content_main.xml" value="0.152" />
-        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/fragment_gallery.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/fragment_gallery.xml" value="0.264" />
         <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/nav_header_main.xml" value="0.152" />
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/nav_header_main.xml" value="0.264" />
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/post_item_view.xml" value="0.4" />
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/layout/toolbar.xml" value="0.1" />
         <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/menu/activity_main_drawer.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/nikhi/AndroidStudioProjects/MsbteWallah/app/src/main/res/menu/main.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -1,9 +1,12 @@
 package com.msbteapp.msbtewallah;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,6 +16,25 @@ public class Resource extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resource);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        String titleStr = getIntent().getExtras().getString("sem_selected");
+        if (titleStr.equals("sem1")){
+            getSupportActionBar().setTitle("Semester 1");
+        }else if (titleStr.equals("sem2")){
+            getSupportActionBar().setTitle("Semester 2");
+        }else if (titleStr.equals("sem3")){
+            getSupportActionBar().setTitle("Semester 3");
+        }else if (titleStr.equals("sem4")){
+            getSupportActionBar().setTitle("Semester 4");
+        }else if (titleStr.equals("sem5")){
+            getSupportActionBar().setTitle("Semester 5");
+        }else if (titleStr.equals("sem6")){
+            getSupportActionBar().setTitle("Semester 6");
+        }else{
+            getSupportActionBar().setTitle("Msbte Wallah");
+        }
 
         Button btn_books = (Button) findViewById(R.id.res_books);
         Button btn_notes = (Button) findViewById(R.id.res_notes);
@@ -92,5 +114,11 @@ public class Resource extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

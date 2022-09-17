@@ -1,9 +1,12 @@
 package com.msbteapp.msbtewallah;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,6 +16,21 @@ public class Branch extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_branch);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        String titleStr = getIntent().getExtras().getString("branch_selected");
+        if (titleStr.equals("co")){
+            getSupportActionBar().setTitle("Computer/IT");
+        }else if (titleStr.equals("mech")){
+            getSupportActionBar().setTitle("Mechanical");
+        }else if (titleStr.equals("elec")){
+            getSupportActionBar().setTitle("Electrical");
+        }else if (titleStr.equals("civil")){
+            getSupportActionBar().setTitle("Civil");
+        }else{
+            getSupportActionBar().setTitle("Msbte Wallah");
+        }
 
         Button btn1 = (Button) findViewById(R.id.sem_1);
         Button btn2 = (Button) findViewById(R.id.sem_2);
@@ -86,5 +104,11 @@ public class Branch extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

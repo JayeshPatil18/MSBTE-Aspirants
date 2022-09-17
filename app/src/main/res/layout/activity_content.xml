@@ -6,6 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".Content">
 
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shimmer_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/content_shimmer"/>
+            <include layout="@layout/content_shimmer"/>
+            <include layout="@layout/content_shimmer"/>
+            <include layout="@layout/content_shimmer"/>
+            <include layout="@layout/content_shimmer"/>
+            <include layout="@layout/content_shimmer"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,6 +43,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/contentRecyclerView"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

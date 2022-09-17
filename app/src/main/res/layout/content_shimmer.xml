@@ -21,11 +21,11 @@
 
         <ImageView
             android:id="@+id/content_image"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:padding="10dp"
-            android:src="@drawable/ic_launcher_foreground"/>
+            android:src="@drawable/shimmer_bg" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,28 +41,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="Jayesh Patil"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:background="@color/white"
+                android:text=""
+                android:textSize="25dp"
+                android:background="@drawable/shimmer_bg"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/content_desc"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Jayesh Patil"
-                android:textSize="15dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="15dp"
+                android:background="@drawable/shimmer_bg"/>
 
 
             <Button
                 android:id="@+id/download_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/download"
+                android:text=""
                 android:background="@drawable/download_btn_bg"
                 android:layout_gravity="bottom"
                 android:textColor="@color/white"/>

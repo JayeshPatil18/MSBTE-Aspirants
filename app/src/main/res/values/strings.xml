@@ -10,4 +10,5 @@
     <string name="menu_home">Home</string>
     <string name="menu_web">MSBTE Web</string>
     <string name="menu_posts">MSBTE Posts</string>
+    <string name="download">Download</string>
 </resources>
