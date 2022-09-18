@@ -20,6 +20,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 import java.util.ArrayList;
 
@@ -45,7 +46,15 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
         Item model = list.get(position);
         holder.title.setText(model.getTitle());
         holder.desc.setText(model.getDesc());
+
+        holder.shimmerFrameLayout.startShimmer();
+
         Glide.with(holder.imageView.getContext()).load(model.getImage()).into(holder.imageView);
+
+        holder.shimmerFrameLayout.stopShimmer();
+        holder.shimmerFrameLayout.setVisibility(View.GONE);
+
+        holder.imageView.setVisibility(View.VISIBLE);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +95,8 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        ShimmerFrameLayout shimmerFrameLayout;
+
         ImageView imageView;
         TextView title, desc;
         CardView cardView;
@@ -93,6 +104,8 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            shimmerFrameLayout = itemView.findViewById(R.id.content_imageShimmer);
 
             imageView = itemView.findViewById(R.id.content_image);
             title = itemView.findViewById(R.id.content_title);

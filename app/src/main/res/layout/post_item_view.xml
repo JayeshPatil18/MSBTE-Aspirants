@@ -33,7 +33,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Msbte declared result"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="the msbte is instituation of plytechtnic word techonlocys of plytechtnic word techonlocys"
+                    android:text=""
                     android:textSize="15dp" />
 
             </LinearLayout>

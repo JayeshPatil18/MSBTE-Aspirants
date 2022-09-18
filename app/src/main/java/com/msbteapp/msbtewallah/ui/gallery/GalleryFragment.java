@@ -16,7 +16,9 @@ import androidx.fragment.app.Fragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
@@ -25,7 +27,7 @@ import com.msbteapp.msbtewallah.databinding.FragmentGalleryBinding;
 
 public class GalleryFragment extends Fragment {
 
-    private InterstitialAd mInterstitialAd;
+    private AdView mAdView;
 
     ShimmerFrameLayout shimmerFrameLayout;
 
@@ -43,23 +45,48 @@ public class GalleryFragment extends Fragment {
         shimmerFrameLayout = view.findViewById(R.id.shimmer_website);
         shimmerFrameLayout.startShimmer();
 
+        mAdView = view.findViewById(R.id.adViewWeb);
         AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
-        InterstitialAd.load(getContext(),"ca-app-pub-6829345224658071/1102529491", adRequest,
-                new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        // The mInterstitialAd reference will be null until
-                        // an ad is loaded.
-                        mInterstitialAd = interstitialAd;
-                    }
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
 
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        // Handle the error
-                        mInterstitialAd = null;
-                    }
-                });
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+                super.onAdFailedToLoad(adError);
+                mAdView.loadAd(adRequest);
+            }
+
+            @Override
+            public void onAdImpression() {
+                // Code to be executed when an impression is recorded
+                // for an ad.
+            }
+
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                super.onAdLoaded();
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+                super.onAdOpened();
+            }
+        });
 
         swipe = view.findViewById(R.id.swipe);
 
@@ -80,7 +107,7 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
                 progressBar.setProgress(newProgress);
-                if (newProgress >= 50){
+                if (newProgress > 50){
                     shimmerFrameLayout.stopShimmer();
                     shimmerFrameLayout.setVisibility(View.GONE);
                     swipe.setVisibility(View.VISIBLE);
@@ -105,7 +132,6 @@ public class GalleryFragment extends Fragment {
                     if (i == KeyEvent.KEYCODE_BACK){
                         if (webView.canGoBack()){
                             webView.goBack();
-                            mInterstitialAd.show(getActivity());
                         }else{
                             getActivity().onBackPressed();
                         }
