@@ -59,12 +59,17 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(holder.cardView.getContext(), PdfView.class);
-                intent.putExtra("filename", model.getTitle());
-                intent.putExtra("fileurl", model.getLink());
+                if (model.getLink().contains("firebasestorage")){
+                    Intent intent = new Intent(holder.cardView.getContext(), PdfView.class);
+                    intent.putExtra("filename", model.getTitle());
+                    intent.putExtra("fileurl", model.getLink());
 
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                holder.cardView.getContext().startActivity(intent);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    holder.cardView.getContext().startActivity(intent);
+                }else {
+                    Uri uri = Uri.parse(model.getLink());
+                    holder.cardView.getContext().startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                }
             }
         });
 
