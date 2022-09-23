@@ -23,4 +23,5 @@
     <style name="Theme.MsbteWallah.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.MsbteWallah.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

@@ -9,106 +9,363 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="50dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/text_bg"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="Select Branch"
-                android:textColor="@color/white"
-                android:textSize="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="10dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/branch_co"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/text_bg"
-                    android:text="Computer/IT"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18dp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/branch_mech"
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/sem1Btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Sem I"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/sem2Btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Sem II"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/sem3Btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Sem III"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/text_bg"
-                    android:text="Mechanical"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18dp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/sem4Btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Sem IV"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/sem5Btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Sem V"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/sem6Btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Sem VI"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/coBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Computer/IT"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/elecBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Electrical"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/mechBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Mechanical"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <Button
+                            android:id="@+id/civilBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/stub"
+                            android:text="Civil"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="20dp">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/branch_elec"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/text_bg"
-                    android:text="Electrical"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18dp" />
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp">
 
-                <Button
-                    android:id="@+id/branch_civil"
+                    <Button
+                        android:id="@+id/res_books"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_bg"
+                        android:text="Books"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:id="@+id/res_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_bg"
+                        android:text="Notes"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/text_bg"
-                    android:text="Civil"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18dp" />
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp">
+
+                    <Button
+                        android:id="@+id/res_manuals"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_bg"
+                        android:text="Manuals"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:id="@+id/res_solvedManuals"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_bg"
+                        android:text="Solved Manuals"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp">
+
+                    <Button
+                        android:id="@+id/res_pyqp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_bg"
+                        android:text="PYQ Papers"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:id="@+id/res_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_bg"
+                        android:text="Other"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
 
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adViewHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/homeAdId">
     </com.google.android.gms.ads.AdView>

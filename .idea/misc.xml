@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/drawable/download_btn_bg.xml" value="0.2385" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/drawable/shimmer_bg.xml" value="0.214" />
+        <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/drawable/stub.xml" value="0.127" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/drawable/text_bg.xml" value="0.1835" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/activity_branch.xml" value="0.264" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/activity_content.xml" value="0.23229166666666667" />
@@ -15,13 +17,16 @@
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/content_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/content_main.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/content_shimmer.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/dialog_branch_select.xml" value="0.264" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/fragment_gallery.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/fragment_home.xml" value="0.2337962962962963" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/fragment_slideshow.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/list_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/nav_header_main.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/post_item_view.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/posts_shimmer.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/jp747/Android Apps/MsbteWallah/app/src/main/res/layout/web_shimmer.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/jp747/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_dropdown_item_1line.xml" value="0.1" />
       </map>
     </option>
   </component>

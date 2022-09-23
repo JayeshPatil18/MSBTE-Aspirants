@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -60,8 +61,10 @@ public class Content extends AppCompatActivity {
             getSupportActionBar().setTitle("Other");
         }
 
-        String selectedBranch = getIntent().getExtras().getString("branch_selected");
-        String selectedSem = getIntent().getExtras().getString("sem_selected");
+        SharedPreferences sharedPreferences = getSharedPreferences("last_items",MODE_PRIVATE);
+
+        String selectedBranch = sharedPreferences.getString("branch","5th");
+        String selectedSem = sharedPreferences.getString("semester","5th");
         String selectedRes = getIntent().getExtras().getString("res_selected");
 
         root = database.getReference("home").child(selectedBranch).child(selectedSem).child(selectedRes);
