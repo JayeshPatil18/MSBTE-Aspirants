@@ -9,12 +9,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="50dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -248,13 +248,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
                     android:orientation="horizontal"
                     android:paddingLeft="20dp"
                     android:paddingTop="20dp"
@@ -288,7 +289,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
                     android:orientation="horizontal"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
@@ -322,7 +324,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
                     android:orientation="horizontal"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"

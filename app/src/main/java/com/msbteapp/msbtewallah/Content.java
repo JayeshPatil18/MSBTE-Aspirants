@@ -63,8 +63,8 @@ public class Content extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("last_items",MODE_PRIVATE);
 
-        String selectedBranch = sharedPreferences.getString("branch","5th");
-        String selectedSem = sharedPreferences.getString("semester","5th");
+        String selectedSem = sharedPreferences.getString("semester","sem5");
+        String selectedBranch = sharedPreferences.getString("branch","co");
         String selectedRes = getIntent().getExtras().getString("res_selected");
 
         root = database.getReference("home").child(selectedBranch).child(selectedSem).child(selectedRes);

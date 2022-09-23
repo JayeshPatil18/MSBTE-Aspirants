@@ -24,14 +24,6 @@
             android:exported="false"
             android:parentActivityName=".Resource"/>
         <activity
-            android:name=".Resource"
-            android:exported="false"
-            android:parentActivityName=".Branch"/>
-        <activity
-            android:name=".Branch"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

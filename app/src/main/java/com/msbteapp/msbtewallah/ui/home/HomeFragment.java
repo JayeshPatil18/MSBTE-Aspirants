@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -22,11 +21,8 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.msbteapp.msbtewallah.Branch;
 import com.msbteapp.msbtewallah.Content;
-import com.msbteapp.msbtewallah.MainActivity;
 import com.msbteapp.msbtewallah.R;
-import com.msbteapp.msbtewallah.Resource;
 import com.msbteapp.msbtewallah.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -91,9 +87,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        SharedPreferences sharedPreferences_Items = getActivity().getSharedPreferences("last_items", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences_Items.edit();
-
         sem1Btn = view.findViewById(R.id.sem1Btn);
         sem2Btn = view.findViewById(R.id.sem2Btn);
         sem3Btn = view.findViewById(R.id.sem3Btn);
@@ -106,11 +99,51 @@ public class HomeFragment extends Fragment {
         mechBtn = view.findViewById(R.id.mechBtn);
         civilBtn = view.findViewById(R.id.civilBtn);
 
-        sem5Btn.setTextColor(getResources().getColor(R.color.white));
-        sem5Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        SharedPreferences sharedPreferences_Items = getActivity().getSharedPreferences("last_items", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences_Items.edit();
 
-        coBtn.setTextColor(getResources().getColor(R.color.white));
-        coBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        String selectedBranch = sharedPreferences_Items.getString("branch","co");
+        String selectedSem = sharedPreferences_Items.getString("semester","sem5");
+
+        if (selectedSem.equals("sem1")){
+            sem1Btn.setTextColor(getResources().getColor(R.color.white));
+            sem1Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else if (selectedSem.equals("sem2")){
+            sem2Btn.setTextColor(getResources().getColor(R.color.white));
+            sem2Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else if (selectedSem.equals("sem3")){
+            sem3Btn.setTextColor(getResources().getColor(R.color.white));
+            sem3Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else if (selectedSem.equals("sem4")){
+            sem4Btn.setTextColor(getResources().getColor(R.color.white));
+            sem4Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else if (selectedSem.equals("sem5")){
+            sem5Btn.setTextColor(getResources().getColor(R.color.white));
+            sem5Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else if (selectedSem.equals("sem6")){
+            sem6Btn.setTextColor(getResources().getColor(R.color.white));
+            sem6Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else {
+            sem5Btn.setTextColor(getResources().getColor(R.color.white));
+            sem5Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }
+
+        if (selectedBranch.equals("co")){
+            coBtn.setTextColor(getResources().getColor(R.color.white));
+            coBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else if (selectedBranch.equals("elec")){
+            elceBtn.setTextColor(getResources().getColor(R.color.white));
+            elceBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else if (selectedBranch.equals("mech")){
+            mechBtn.setTextColor(getResources().getColor(R.color.white));
+            mechBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else if (selectedBranch.equals("civil")){
+            civilBtn.setTextColor(getResources().getColor(R.color.white));
+            civilBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }else {
+            coBtn.setTextColor(getResources().getColor(R.color.white));
+            coBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.download_btn_bg));
+        }
 
         Button btn_books = (Button) view.findViewById(R.id.res_books);
         Button btn_notes = (Button) view.findViewById(R.id.res_notes);

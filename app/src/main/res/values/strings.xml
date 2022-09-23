@@ -2,7 +2,7 @@
     <string name="app_name">MSBTE Wallah</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Msbte Wallah</string>
+    <string name="nav_header_title">MSBTE Wallah</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
@@ -14,7 +14,5 @@
 
     <string name="appAdId">ca-app-pub-6829345224658071~6349603858</string>
     <string name="homeAdId">ca-app-pub-6829345224658071/4716919998</string>
-    <string name="semAdId">cca-app-pub-6829345224658071/6079524006</string>
-    <string name="resAdId">ca-app-pub-6829345224658071/3261788974</string>
     <string name="webAdId">ca-app-pub-6829345224658071/1551167770</string>
 </resources>

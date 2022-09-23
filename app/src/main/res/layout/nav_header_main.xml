@@ -14,8 +14,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:contentDescription="@string/nav_header_desc"
         android:src="@drawable/simple_msbte"
         android:layout_marginTop="40dp"
