@@ -21,6 +21,11 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.msbteapp.msbtewallah.Content;
 import com.msbteapp.msbtewallah.R;
 import com.msbteapp.msbtewallah.databinding.FragmentHomeBinding;
@@ -101,6 +106,30 @@ public class HomeFragment extends Fragment {
 
         SharedPreferences sharedPreferences_Items = getActivity().getSharedPreferences("last_items", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences_Items.edit();
+
+        boolean is_first_run = sharedPreferences_Items.getBoolean("is_first_run", true);
+
+        if (is_first_run) {
+
+            editor.putBoolean("is_first_run", false);
+            editor.commit();
+
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference root = database.getReference("downloads");
+
+            root.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    int value = snapshot.getValue(Integer.class);
+                    root.setValue(value + 1);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
 
         String selectedBranch = sharedPreferences_Items.getString("branch","co");
         String selectedSem = sharedPreferences_Items.getString("semester","sem5");

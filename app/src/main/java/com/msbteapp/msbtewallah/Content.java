@@ -84,7 +84,7 @@ public class Content extends AppCompatActivity {
                 list.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Item model = dataSnapshot.getValue(Item.class);
-                    list.add(model);
+                    list.add(0,model);
                 }
 
                 shimmerFrameLayout.stopShimmer();
