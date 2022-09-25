@@ -43,7 +43,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Sem I"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -63,7 +63,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Sem II"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -81,7 +81,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Sem III"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -107,7 +107,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Sem IV"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -126,7 +126,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Sem V"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -146,7 +146,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Sem VI"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -172,7 +172,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Computer/IT"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -192,7 +192,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Electrical"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -218,7 +218,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Mechanical"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -238,7 +238,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
                             android:text="Civil"
-                            android:textColor="@color/black"
+                            android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
 

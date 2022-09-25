@@ -26,6 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.msbteapp.msbtewallah.Content;
 import com.msbteapp.msbtewallah.R;
 import com.msbteapp.msbtewallah.databinding.FragmentHomeBinding;
@@ -91,6 +92,8 @@ public class HomeFragment extends Fragment {
                 super.onAdOpened();
             }
         });
+
+        FirebaseMessaging.getInstance().subscribeToTopic("notification");
 
         sem1Btn = view.findViewById(R.id.sem1Btn);
         sem2Btn = view.findViewById(R.id.sem2Btn);
@@ -250,15 +253,15 @@ public class HomeFragment extends Fragment {
                 editor.putString("semester", "sem1");
                 editor.commit();
 
-                sem2Btn.setTextColor(getResources().getColor(R.color.black));
+                sem2Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem2Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem3Btn.setTextColor(getResources().getColor(R.color.black));
+                sem3Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem3Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem4Btn.setTextColor(getResources().getColor(R.color.black));
+                sem4Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem4Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem5Btn.setTextColor(getResources().getColor(R.color.black));
+                sem5Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem5Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem6Btn.setTextColor(getResources().getColor(R.color.black));
+                sem6Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem6Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });
@@ -272,15 +275,15 @@ public class HomeFragment extends Fragment {
                 editor.putString("semester", "sem2");
                 editor.commit();
 
-                sem1Btn.setTextColor(getResources().getColor(R.color.black));
+                sem1Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem1Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem3Btn.setTextColor(getResources().getColor(R.color.black));
+                sem3Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem3Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem4Btn.setTextColor(getResources().getColor(R.color.black));
+                sem4Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem4Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem5Btn.setTextColor(getResources().getColor(R.color.black));
+                sem5Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem5Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem6Btn.setTextColor(getResources().getColor(R.color.black));
+                sem6Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem6Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });
@@ -294,15 +297,15 @@ public class HomeFragment extends Fragment {
                 editor.putString("semester", "sem3");
                 editor.commit();
 
-                sem1Btn.setTextColor(getResources().getColor(R.color.black));
+                sem1Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem1Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem2Btn.setTextColor(getResources().getColor(R.color.black));
+                sem2Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem2Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem4Btn.setTextColor(getResources().getColor(R.color.black));
+                sem4Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem4Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem5Btn.setTextColor(getResources().getColor(R.color.black));
+                sem5Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem5Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem6Btn.setTextColor(getResources().getColor(R.color.black));
+                sem6Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem6Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });
@@ -316,15 +319,15 @@ public class HomeFragment extends Fragment {
                 editor.putString("semester", "sem4");
                 editor.commit();
 
-                sem1Btn.setTextColor(getResources().getColor(R.color.black));
+                sem1Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem1Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem2Btn.setTextColor(getResources().getColor(R.color.black));
+                sem2Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem2Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem3Btn.setTextColor(getResources().getColor(R.color.black));
+                sem3Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem3Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem5Btn.setTextColor(getResources().getColor(R.color.black));
+                sem5Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem5Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem6Btn.setTextColor(getResources().getColor(R.color.black));
+                sem6Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem6Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });
@@ -338,15 +341,15 @@ public class HomeFragment extends Fragment {
                 editor.putString("semester", "sem5");
                 editor.commit();
 
-                sem1Btn.setTextColor(getResources().getColor(R.color.black));
+                sem1Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem1Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem2Btn.setTextColor(getResources().getColor(R.color.black));
+                sem2Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem2Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem3Btn.setTextColor(getResources().getColor(R.color.black));
+                sem3Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem3Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem4Btn.setTextColor(getResources().getColor(R.color.black));
+                sem4Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem4Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem6Btn.setTextColor(getResources().getColor(R.color.black));
+                sem6Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem6Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });
@@ -360,15 +363,15 @@ public class HomeFragment extends Fragment {
                 editor.putString("semester", "sem6");
                 editor.commit();
 
-                sem1Btn.setTextColor(getResources().getColor(R.color.black));
+                sem1Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem1Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem2Btn.setTextColor(getResources().getColor(R.color.black));
+                sem2Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem2Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem3Btn.setTextColor(getResources().getColor(R.color.black));
+                sem3Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem3Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem4Btn.setTextColor(getResources().getColor(R.color.black));
+                sem4Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem4Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                sem5Btn.setTextColor(getResources().getColor(R.color.black));
+                sem5Btn.setTextColor(getResources().getColor(R.color.app_default));
                 sem5Btn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });
@@ -382,11 +385,11 @@ public class HomeFragment extends Fragment {
                 editor.putString("branch", "co");
                 editor.commit();
 
-                elceBtn.setTextColor(getResources().getColor(R.color.black));
+                elceBtn.setTextColor(getResources().getColor(R.color.app_default));
                 elceBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                mechBtn.setTextColor(getResources().getColor(R.color.black));
+                mechBtn.setTextColor(getResources().getColor(R.color.app_default));
                 mechBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                civilBtn.setTextColor(getResources().getColor(R.color.black));
+                civilBtn.setTextColor(getResources().getColor(R.color.app_default));
                 civilBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });
@@ -400,11 +403,11 @@ public class HomeFragment extends Fragment {
                 editor.putString("branch", "elec");
                 editor.commit();
 
-                coBtn.setTextColor(getResources().getColor(R.color.black));
+                coBtn.setTextColor(getResources().getColor(R.color.app_default));
                 coBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                mechBtn.setTextColor(getResources().getColor(R.color.black));
+                mechBtn.setTextColor(getResources().getColor(R.color.app_default));
                 mechBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                civilBtn.setTextColor(getResources().getColor(R.color.black));
+                civilBtn.setTextColor(getResources().getColor(R.color.app_default));
                 civilBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });
@@ -418,11 +421,11 @@ public class HomeFragment extends Fragment {
                 editor.putString("branch", "mech");
                 editor.commit();
 
-                coBtn.setTextColor(getResources().getColor(R.color.black));
+                coBtn.setTextColor(getResources().getColor(R.color.app_default));
                 coBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                elceBtn.setTextColor(getResources().getColor(R.color.black));
+                elceBtn.setTextColor(getResources().getColor(R.color.app_default));
                 elceBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                civilBtn.setTextColor(getResources().getColor(R.color.black));
+                civilBtn.setTextColor(getResources().getColor(R.color.app_default));
                 civilBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });
@@ -436,11 +439,11 @@ public class HomeFragment extends Fragment {
                 editor.putString("branch", "civil");
                 editor.commit();
 
-                coBtn.setTextColor(getResources().getColor(R.color.black));
+                coBtn.setTextColor(getResources().getColor(R.color.app_default));
                 coBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                elceBtn.setTextColor(getResources().getColor(R.color.black));
+                elceBtn.setTextColor(getResources().getColor(R.color.app_default));
                 elceBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
-                mechBtn.setTextColor(getResources().getColor(R.color.black));
+                mechBtn.setTextColor(getResources().getColor(R.color.app_default));
                 mechBtn.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.stub));
             }
         });

@@ -31,7 +31,7 @@ public class PdfView extends AppCompatActivity {
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
-        InterstitialAd.load(this,"ca-app-pub-6829345224658071/1404113523", adRequest,
+        InterstitialAd.load(this,"ca-app-pub-4448917615540841/9377788538", adRequest,
                 new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
