@@ -14,7 +14,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -25,7 +25,29 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="SEMESTER"
+                            android:textColor="@color/app_default"
+                            android:textSize="14dp"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"/>
+                    </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
@@ -34,15 +56,15 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="3dp">
 
                         <Button
                             android:id="@+id/sem1Btn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
-                            android:text="Sem I"
+                            android:text="I"
                             android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
@@ -54,15 +76,15 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="3dp">
 
                         <Button
                             android:id="@+id/sem2Btn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
-                            android:text="Sem II"
+                            android:text="II"
                             android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
@@ -70,43 +92,39 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="3dp">
 
                         <Button
                             android:id="@+id/sem3Btn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
-                            android:text="Sem III"
+                            android:text="III"
                             android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="3dp">
 
                         <Button
                             android:id="@+id/sem4Btn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
-                            android:text="Sem IV"
+                            android:text="IV"
                             android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
@@ -115,17 +133,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="3dp">
 
                         <Button
                             android:id="@+id/sem5Btn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
-                            android:text="Sem V"
+                            android:text="V"
                             android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
@@ -134,18 +153,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="3dp">
 
                         <Button
                             android:id="@+id/sem6Btn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/stub"
-                            android:text="Sem VI"
+                            android:text="VI"
                             android:textColor="@color/app_default"
                             android:textSize="14dp" />
                     </androidx.cardview.widget.CardView>
@@ -158,203 +177,302 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
                         android:layout_marginBottom="10dp"
-                        android:layout_weight="1"
                         app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
+                        app:cardElevation="3dp">
 
-                        <Button
-                            android:id="@+id/coBtn"
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/stub"
-                            android:text="Computer/IT"
+                            android:gravity="center"
+                            android:text="BRANCH"
                             android:textColor="@color/app_default"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"/>
                     </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_weight="1"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
+                        android:orientation="vertical">
 
-                        <Button
-                            android:id="@+id/elecBtn"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/stub"
-                            android:text="Electrical"
-                            android:textColor="@color/app_default"
-                            android:textSize="14dp" />
-                    </androidx.cardview.widget.CardView>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="100dp"
+                                    app:cardElevation="3dp">
+
+                                    <Button
+                                        android:id="@+id/coBtn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/stub"
+                                        android:text="Computer/IT"
+                                        android:textColor="@color/app_default"
+                                        android:textSize="14dp" />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="100dp"
+                                    app:cardElevation="3dp">
+
+                                    <Button
+                                        android:id="@+id/elecBtn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/stub"
+                                        android:text="Electrical"
+                                        android:textColor="@color/app_default"
+                                        android:textSize="14dp" />
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="100dp"
+                                    app:cardElevation="3dp">
+
+                                    <Button
+                                        android:id="@+id/mechBtn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/stub"
+                                        android:text="Mechanical"
+                                        android:textColor="@color/app_default"
+                                        android:textSize="14dp" />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="100dp"
+                                    app:cardElevation="3dp">
+
+                                    <Button
+                                        android:id="@+id/civilBtn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/stub"
+                                        android:text="Civil"
+                                        android:textColor="@color/app_default"
+                                        android:textSize="14dp" />
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_weight="1"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
-
-                        <Button
-                            android:id="@+id/mechBtn"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/stub"
-                            android:text="Mechanical"
-                            android:textColor="@color/app_default"
-                            android:textSize="14dp" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_weight="1"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="5dp">
-
-                        <Button
-                            android:id="@+id/civilBtn"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/stub"
-                            android:text="Civil"
-                            android:textColor="@color/app_default"
-                            android:textSize="14dp" />
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="20dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="10dp">
+                    android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/res_books"
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/text_bg"
-                        android:text="Books"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="18dp" />
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp">
 
-                    <Button
-                        android:id="@+id/res_notes"
+                        <Button
+                            android:id="@+id/res_books"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/text_bg"
+                            android:padding="15dp"
+                            android:text="Books"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/text_bg"
-                        android:text="Notes"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="18dp" />
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp">
+
+                        <Button
+                            android:id="@+id/res_notes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/text_bg"
+                            android:padding="15dp"
+                            android:text="Notes"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="10dp">
+                    android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/res_manuals"
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/text_bg"
-                        android:text="Manuals"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="18dp" />
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp">
 
-                    <Button
-                        android:id="@+id/res_solvedManuals"
+                        <Button
+                            android:id="@+id/res_manuals"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/text_bg"
+                            android:padding="15dp"
+                            android:text="Manuals"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/text_bg"
-                        android:text="Solved Manuals"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="18dp" />
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp">
+
+                        <Button
+                            android:id="@+id/res_solvedManuals"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/text_bg"
+                            android:padding="15dp"
+                            android:text="Solved Manuals"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </androidx.cardview.widget.CardView>
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="20dp">
+                    android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/res_pyqp"
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:background="@drawable/text_bg"
-                        android:text="PYQ Papers"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="18dp" />
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp">
 
-                    <Button
-                        android:id="@+id/res_other"
+                        <Button
+                            android:id="@+id/res_pyqp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/text_bg"
+                            android:padding="15dp"
+                            android:text="PYQ Papers"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:background="@drawable/text_bg"
-                        android:text="Other"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="18dp" />
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp">
+
+                        <Button
+                            android:id="@+id/res_other"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/text_bg"
+                            android:padding="15dp"
+                            android:text="Other"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </androidx.cardview.widget.CardView>
+
                 </LinearLayout>
 
             </LinearLayout>
