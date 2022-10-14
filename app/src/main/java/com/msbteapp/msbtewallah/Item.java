@@ -5,6 +5,7 @@ public class Item {
     String desc;
     String image;
     String link;
+    String D_link;
 
     public String getTitle() {
         return title;
@@ -20,5 +21,9 @@ public class Item {
 
     public String getLink() {
         return link;
+    }
+
+    public String getD_link() {
+        return D_link;
     }
 }

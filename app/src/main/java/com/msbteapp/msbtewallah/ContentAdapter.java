@@ -76,7 +76,11 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
         holder.btnDownlaod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                downloadFile(holder.btnDownlaod.getContext(),model.getTitle(),".pdf",DIRECTORY_DOWNLOADS,model.getLink());
+                if (model.getD_link().isEmpty() || model.getD_link().equals("null")){
+                    downloadFile(holder.btnDownlaod.getContext(),model.getTitle(),".pdf",DIRECTORY_DOWNLOADS,model.getLink());
+                }else{
+                    downloadFile(holder.btnDownlaod.getContext(),model.getTitle(),".pdf",DIRECTORY_DOWNLOADS,model.getD_link());
+                }
             }
         });
     }
