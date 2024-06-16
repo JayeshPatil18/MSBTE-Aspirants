@@ -116,7 +116,7 @@ Open a terminal in the project directory and run:
 
 ```bash
 ./gradlew build
-
+```
 
 ## Connect Your Device
 
