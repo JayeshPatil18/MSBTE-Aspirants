@@ -38,40 +38,22 @@ Welcome to **MSBTE Aspirants**, the essential app for MSBTE I Scheme Diploma stu
 - **XML**: For designing user interfaces.
 - **Firebase**: Ensuring robust and scalable backend services including authentication, database, and cloud storage.
 
-## Project Structure
 
-We follow a clean architecture approach to ensure a scalable and maintainable codebase. Below is an overview of our project structure:
+### Key Components:
 
-```plaintext
-src
-│
-├── constants
-│   ├── utils
-│   ├── routes
-│
-├── features
-│   ├── authentication
-│   │   ├── data
-│   │   │   └── repository
-│   │   ├── domain
-│   │   │   └── entities
-│   │   ├── presentation
-│   │       ├── bloc
-│   │       ├── provider
-│   │       ├── pages
-│   │       └── widgets
-│   │
-│   ├── study_material
-│       ├── data
-│       │   └── repository
-│       ├── domain
-│       │   └── entities
-│       ├── presentation
-│           ├── bloc
-│           ├── provider
-│           ├── pages
-│           └── widgets
-```
+- **`build.gradle`**: Configuration file for Gradle build system.
+- **`settings.gradle`**: Settings file that includes all modules in the project.
+- **`AndroidManifest.xml`**: Describes the fundamental characteristics of the app and defines each of its components.
+- **`java/`**: Contains Java (or Kotlin) source code for the app.
+- **`res/`**: Contains resources used by the app such as images, layouts, strings, and styles.
+- **`drawable/`**: Stores drawable resources like images and XML drawables.
+- **`layout/`**: Contains XML files that define the layout structure of activities and fragments.
+- **`mipmap/`**: Contains launcher icons for different densities.
+- **`values/`**: Contains XML files for various values such as strings, styles, dimensions, colors, and more.
+- **`test/`**: Contains test code for the app, typically used for unit tests.
+
+This structure provides a basic overview of how an Android project is organized, with directories for source code, resources, tests, and configuration files. Adjustments can be made based on specific project requirements or additional modules included in the project.
+
 
 ## Getting Started
 
