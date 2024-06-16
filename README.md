@@ -73,3 +73,38 @@ src
 │           └── widgets
 ```
 
+## Getting Started
+
+To get started with **MSBTE Aspirants**, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/JayeshPatil18/MSBTE-Aspirants.git
+   
+## Install Android Studio
+
+Download and install [Android Studio](https://developer.android.com/studio). Follow the installation instructions for your operating system.
+
+## Set up Android SDK
+
+1. Open Android Studio.
+2. Navigate to `File > Settings > Appearance & Behavior > System Settings > Android SDK`.
+3. **SDK Platforms tab:**
+   - Ensure that `Android 10 (Q)` is checked or installed.
+   
+4. **SDK Tools tab:**
+   - Install the latest version of `Android SDK Build-Tools`.
+
+## Set up Android SDK
+
+1. Open Android Studio.
+2. Go to `File > Settings > Appearance & Behavior > System Settings > Android SDK`.
+3. **SDK Platforms tab**:
+   - Ensure that `Android 10 (Q)` is checked or installed.
+
+4. **SDK Tools tab**:
+   - Install the latest version of `Android SDK Build-Tools`.
+
+## Install Java Development Kit (JDK)
+
+Ensure you have JDK 8 or higher installed. You can download it from [Oracle's website](https://www.oracle.com/java/technologies/javase-downloads.html).
