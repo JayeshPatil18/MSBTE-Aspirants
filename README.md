@@ -108,3 +108,11 @@ Download and install [Android Studio](https://developer.android.com/studio). Fol
 ## Install Java Development Kit (JDK)
 
 Ensure you have JDK 8 or higher installed. You can download it from [Oracle's website](https://www.oracle.com/java/technologies/javase-downloads.html).
+
+
+## Install Dependencies
+
+Open a terminal in the project directory and run:
+
+```bash
+./gradlew build
