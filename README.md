@@ -16,9 +16,9 @@ Welcome to **MSBTE Aspirants**, the essential app for MSBTE I Scheme Diploma stu
 
 </br>
 
-*Available Now on Play Store.* [Click here](https://play.google.com/store/apps/details?id=com.msbteapp.msbtewallah)
+*Available on Play Store.* [Click here](https://play.google.com/store/apps/details?id=com.msbteapp.msbtewallah)
 
-[<img src="https://github.com/JayeshPatil18/MSBTE-Aspirants/blob/master/msbte-aspirants.png" alt="Available Now" width="200"/>](https://play.google.com/store/apps/details?id=com.msbteapp.msbtewallah)
+![Available](https://github.com/JayeshPatil18/MSBTE-Aspirants/blob/master/msbte-aspirants.png)
 
 ## Description
 
